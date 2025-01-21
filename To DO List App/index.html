@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_Files/all.css">
+    <link rel="stylesheet" href="css_Files/bootstrap.min.css">
+    <link rel="stylesheet" href="css_Files/style.css">
+    <title>To do list</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="text-center m-4" >TO DO LIST</h1>
+    </header>
+    <div class="container big-div">
+        <div class="container form shadow-sm">
+            <div class="row g-4 m-4">
+                <div class="col-md">
+                    <input type="text" class="form-control" id="task-name" placeholder="Task Name" >
+                </div>
+                <div class="col-md">
+                    <input type="text" class="form-control" id="task-description" placeholder="Task Description" >
+                </div>
+            </div>
+            <div class="row g-4 mx-4">
+                <div class="col-md">
+                    <select class="form-select" id="task-status" aria-label="Floating label select example" >
+                    <option selected >Task Status</option>
+                    <option>Not-started</option>
+                    <option>In-progress</option>
+                    <option>Done</option>
+                    </select>
+                </div>
+                
+                <div class="col-md">
+                    <select class="form-select" id="task-project" aria-label="Floating label select example">
+                    <option selected>Task Project</option>
+                    <option>Personal</option>
+                    <option>Business Work</option>
+                    <option>Student Projects</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-grid gap-3 col-2 mx-auto my-4">
+                <button onclick="AddTask()" class="btn btn-primary" id="add-btn" type="button">Add</button>
+                <button onclick="UpdateTask()" class="btn btn-secondary d-none" id="update-btn" type="button">Update</button>
+            </div>
+        </div>
+        <h4 class="text-center"><b>My Tasks</b></h4>
+        <div class="container lists-container float-right" id="tasks-container">
+            
+        </div>
+    </div>
+    <script src="Js/index.js"></script>
+</body>
+</html>
